@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\utilities">
+      <UniqueIdentifier>{881e71f6-355b-44cf-82d5-5f587ee28ec7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\fuzzy">
+      <UniqueIdentifier>{36673201-798d-4836-b3ae-0f0354eebb49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fuzzy">
+      <UniqueIdentifier>{ac3d109e-851c-4aef-aa26-b7c7a807e5c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fuzzy\defuzzification">
+      <UniqueIdentifier>{7b879655-9311-4007-be2d-cfdbf1ad0ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fuzzy\defuzzification">
+      <UniqueIdentifier>{dfa5713b-9f8f-418a-b2ac-8a9da2c56835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\algorithm">
+      <UniqueIdentifier>{26ba444d-4954-4d29-8b19-c4f75c89540a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\algorithm">
+      <UniqueIdentifier>{0248c711-189c-4cef-b78d-86aac175ede1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities">
+      <UniqueIdentifier>{2c7d7a76-8c36-4174-88ec-5939ab304453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fuzzy\graph">
+      <UniqueIdentifier>{de2558d9-61ef-4c3d-99b5-cfc975ab6ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fuzzy\graph">
+      <UniqueIdentifier>{b31494be-43b6-429f-b851-812e6b101681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fuzzy\graph\linkedImplementation">
+      <UniqueIdentifier>{d11189c0-9bba-439a-9271-18d4b692d92d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fuzzy\graph\adjMatrixImplementation">
+      <UniqueIdentifier>{52c4413f-20fc-4291-898d-ab53370e1f2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fuzzy\set">
+      <UniqueIdentifier>{df16341f-85c2-4c39-b4ef-c1152f3b7732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fuzzy\set">
+      <UniqueIdentifier>{533b0a78-b733-43ed-9b2c-99580965a2ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Timer.h">
+      <Filter>Header Files\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm.cpp">
+      <Filter>Source Files\algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Prim.cpp">
+      <Filter>Source Files\algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="GradedMeanIntegration.cpp">
+      <Filter>Source Files\fuzzy\defuzzification</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files\fuzzy\set</Filter>
+    </ClCompile>
+    <ClCompile Include="Trapezoid.cpp">
+      <Filter>Source Files\fuzzy\set</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Source Files\fuzzy\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="fuzzylogic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>Source Files\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzySet.cpp">
+      <Filter>Source Files\fuzzy\set</Filter>
+    </ClCompile>
+    <ClCompile Include="MiddleOfMaximum.cpp">
+      <Filter>Source Files\fuzzy\defuzzification</Filter>
+    </ClCompile>
+    <ClCompile Include="MeanOfMaxima.cpp">
+      <Filter>Source Files\fuzzy\defuzzification</Filter>
+    </ClCompile>
+    <ClCompile Include="LastOfMaximum.cpp">
+      <Filter>Source Files\fuzzy\defuzzification</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Algorithm.h">
+      <Filter>Header Files\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Prim.h">
+      <Filter>Header Files\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Defuzzifier.h">
+      <Filter>Header Files\fuzzy\defuzzification</Filter>
+    </ClInclude>
+    <ClInclude Include="GradedMeanIntegration.h">
+      <Filter>Header Files\fuzzy\defuzzification</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyNumber.h">
+      <Filter>Header Files\fuzzy\set</Filter>
+    </ClInclude>
+    <ClInclude Include="Trapezoid.h">
+      <Filter>Header Files\fuzzy\set</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Header Files\fuzzy\set</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Header Files\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Header Files\fuzzy\graph\adjMatrixImplementation</Filter>
+    </ClInclude>
+    <ClInclude Include="Edge.h">
+      <Filter>Header Files\fuzzy\graph\linkedImplementation</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Header Files\fuzzy\graph\linkedImplementation</Filter>
+    </ClInclude>
+    <ClInclude Include="Weight.h">
+      <Filter>Header Files\fuzzy\graph\linkedImplementation</Filter>
+    </ClInclude>
+    <ClInclude Include="MeanOfMaxima.h">
+      <Filter>Header Files\fuzzy\defuzzification</Filter>
+    </ClInclude>
+    <ClInclude Include="MiddleOfMaximum.h">
+      <Filter>Header Files\fuzzy\defuzzification</Filter>
+    </ClInclude>
+    <ClInclude Include="LastOfMaximum.h">
+      <Filter>Header Files\fuzzy\defuzzification</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzySet.h">
+      <Filter>Header Files\fuzzy\set</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
