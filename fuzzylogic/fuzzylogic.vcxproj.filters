@@ -28,26 +28,8 @@
     <Filter Include="Header Files\fuzzy\defuzzification">
       <UniqueIdentifier>{dfa5713b-9f8f-418a-b2ac-8a9da2c56835}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\algorithm">
-      <UniqueIdentifier>{26ba444d-4954-4d29-8b19-c4f75c89540a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\algorithm">
-      <UniqueIdentifier>{0248c711-189c-4cef-b78d-86aac175ede1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\utilities">
       <UniqueIdentifier>{2c7d7a76-8c36-4174-88ec-5939ab304453}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\fuzzy\graph">
-      <UniqueIdentifier>{de2558d9-61ef-4c3d-99b5-cfc975ab6ece}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\fuzzy\graph">
-      <UniqueIdentifier>{b31494be-43b6-429f-b851-812e6b101681}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\fuzzy\graph\linkedImplementation">
-      <UniqueIdentifier>{d11189c0-9bba-439a-9271-18d4b692d92d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\fuzzy\graph\adjMatrixImplementation">
-      <UniqueIdentifier>{52c4413f-20fc-4291-898d-ab53370e1f2a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\fuzzy\set">
       <UniqueIdentifier>{df16341f-85c2-4c39-b4ef-c1152f3b7732}</UniqueIdentifier>
@@ -55,16 +37,34 @@
     <Filter Include="Source Files\fuzzy\set">
       <UniqueIdentifier>{533b0a78-b733-43ed-9b2c-99580965a2ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\extensions">
+      <UniqueIdentifier>{de2558d9-61ef-4c3d-99b5-cfc975ab6ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\extensions\linkedImplementation">
+      <UniqueIdentifier>{d11189c0-9bba-439a-9271-18d4b692d92d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\extensions\adjMatrixImplementation">
+      <UniqueIdentifier>{52c4413f-20fc-4291-898d-ab53370e1f2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\problems">
+      <UniqueIdentifier>{26ba444d-4954-4d29-8b19-c4f75c89540a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\problems">
+      <UniqueIdentifier>{0248c711-189c-4cef-b78d-86aac175ede1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\extensions">
+      <UniqueIdentifier>{b31494be-43b6-429f-b851-812e6b101681}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Timer.h">
       <Filter>Header Files\utilities</Filter>
     </ClCompile>
     <ClCompile Include="Algorithm.cpp">
-      <Filter>Source Files\algorithm</Filter>
+      <Filter>Source Files\problems</Filter>
     </ClCompile>
     <ClCompile Include="Prim.cpp">
-      <Filter>Source Files\algorithm</Filter>
+      <Filter>Source Files\problems</Filter>
     </ClCompile>
     <ClCompile Include="GradedMeanIntegration.cpp">
       <Filter>Source Files\fuzzy\defuzzification</Filter>
@@ -76,7 +76,7 @@
       <Filter>Source Files\fuzzy\set</Filter>
     </ClCompile>
     <ClCompile Include="Graph.cpp">
-      <Filter>Source Files\fuzzy\graph</Filter>
+      <Filter>Source Files\extensions</Filter>
     </ClCompile>
     <ClCompile Include="fuzzylogic.cpp">
       <Filter>Source Files</Filter>
@@ -99,10 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithm.h">
-      <Filter>Header Files\algorithm</Filter>
+      <Filter>Header Files\problems</Filter>
     </ClInclude>
     <ClInclude Include="Prim.h">
-      <Filter>Header Files\algorithm</Filter>
+      <Filter>Header Files\problems</Filter>
     </ClInclude>
     <ClInclude Include="Defuzzifier.h">
       <Filter>Header Files\fuzzy\defuzzification</Filter>
@@ -123,16 +123,16 @@
       <Filter>Header Files\utilities</Filter>
     </ClInclude>
     <ClInclude Include="Graph.h">
-      <Filter>Header Files\fuzzy\graph\adjMatrixImplementation</Filter>
+      <Filter>Header Files\extensions\adjMatrixImplementation</Filter>
     </ClInclude>
     <ClInclude Include="Edge.h">
-      <Filter>Header Files\fuzzy\graph\linkedImplementation</Filter>
+      <Filter>Header Files\extensions\linkedImplementation</Filter>
     </ClInclude>
     <ClInclude Include="Node.h">
-      <Filter>Header Files\fuzzy\graph\linkedImplementation</Filter>
+      <Filter>Header Files\extensions\linkedImplementation</Filter>
     </ClInclude>
     <ClInclude Include="Weight.h">
-      <Filter>Header Files\fuzzy\graph\linkedImplementation</Filter>
+      <Filter>Header Files\extensions\linkedImplementation</Filter>
     </ClInclude>
     <ClInclude Include="MeanOfMaxima.h">
       <Filter>Header Files\fuzzy\defuzzification</Filter>

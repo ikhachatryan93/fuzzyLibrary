@@ -22,6 +22,22 @@ double Trapezoid::getMembership(double t) const
     }
 }
 
+bool Trapezoid::operator==(const Trapezoid& op) const
+{
+    if (op.getLeft() == this->getLeft() &&
+        op.getRight() == this->getRight() &&
+        op.getLeftMiddle() == this->getLeftMiddle() &&
+        op.getRightMiddle() == this->getRightMiddle()) {
+        return true;
+    }
+    return false;
+}
+
+bool Trapezoid::operator!=(const Trapezoid& op) const
+{
+    return !(op == *this);
+}
+
 Trapezoid Trapezoid::operator+(const Trapezoid& op) const
 {
     const auto left = getLeft(), right = getRight(), leftMiddle = getLeftMiddle(), rightMiddle = getRightMiddle();

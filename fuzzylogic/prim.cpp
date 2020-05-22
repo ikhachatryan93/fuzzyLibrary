@@ -131,7 +131,7 @@ void convertToCrispValues(const std::vector<std::vector<fuzzy::Triangle>>& fuzzy
 }
 
 
-std::vector<unsigned> Prim::getMstCrisp(std::vector<std::vector<fuzzy::Triangle>>& adjMatrix)
+std::vector<unsigned> Prim::getMstScalar(std::vector<std::vector<fuzzy::Triangle>>& adjMatrix)
 {
     const auto size = adjMatrix.size();
 
@@ -172,59 +172,54 @@ std::vector<unsigned> Prim::getMstCrisp(std::vector<std::vector<fuzzy::Triangle>
     }
 
     for (unsigned v = 1; v < size; v++) {
-        costFN.add(
-            adjMatrix[parent[v]][v]
-        );
+        costFN += adjMatrix[parent[v]][v];
     }
     std::cout << "Final cost = " << fuzzy::GradedMeanIntegration::defuzzify(&costFN);
     return parent;
 }
 
-std::vector<unsigned> Prim::getMstFuzzy(std::vector<std::vector<fuzzy::Triangle>>& adjMatrix)
-{
-    const auto size = adjMatrix.size();
-
-    std::vector<std::vector<double>> crispAdjMatrix;
-    convertToCrispValues(adjMatrix, crispAdjMatrix);
-
-    // Array to store constructed MST  
-    std::vector<unsigned> parent(size);
-
-    // Key values used to pick minimum weight edge in cut  
-    std::vector<double> key(size, DBL_MAX);
-
-    // To represent set of vertices not yet included in MST  
-    std::vector<bool> mstSet(size, false);
-
-    // Always include first vertex in MST.  
-    // Make key 0 so that this vertex is picked as first vertex.  
-    key[0] = 0;
-    parent[0] = -1; // First node is always root of MST  
-
-    fuzzy::Triangle costFN = fuzzy::Triangle();
-
-    // The MST will have V vertices  
-    for (unsigned count = 0; count < size - 1; count++)
-    {
-        // Pick the minimum key vertex from the  
-        // set of vertices not yet included in MST  
-        int u = minKey<double>(key, mstSet);
-
-        // Add the picked vertex to the MST Set  
-        mstSet[u] = true;
-
-        for (unsigned v = 0; v < size; v++) {
-            if (crispAdjMatrix[u][v] && mstSet[v] == false && crispAdjMatrix[u][v] < key[v]) {
-                parent[v] = u, key[v] = crispAdjMatrix[u][v];
-            }
-        }
-    }
-
-    for (unsigned v = 1; v < size; v++) {
-        costFN.add(
-            adjMatrix[parent[v]][v]
-        );
-    }
-    std::cout << "Final cost = " << fuzzy::GradedMeanIntegration::defuzzify(&costFN);
-    return parent;
-}
+//std::vector<unsigned> Prim::getMstFuzzy(std::vector<std::vector<fuzzy::Triangle>>& adjMatrix)
+//{
+//    const auto size = adjMatrix.size();
+//    const auto nullTriangle = fuzzy::Triangle();
+//
+//    // Array to store constructed MST  
+//    std::vector<unsigned> parent(size);
+//
+//    // Key values used to pick minimum weight edge in cut  
+//    std::vector<fuzzy::Triangle> key(size, fuzzy::Triangle());
+//
+//    // To represent set of vertices not yet included in MST  
+//    std::vector<bool> mstSet(size, false);
+//
+//    // Always include first vertex in MST.  
+//    // Make key 0 so that this vertex is picked as first vertex.  
+//    key[0] = nullTriangle;
+//    parent[0] = -1; // First node is always root of MST  
+//
+//
+//    // The MST will have V vertices  
+//    for (unsigned count = 0; count < size - 1; count++)
+//    {
+//        // Pick the minimum key vertex from the  
+//        // set of vertices not yet included in MST  
+//        int u = minKey<double>(key, mstSet);
+//
+//        // Add the picked vertex to the MST Set  
+//        mstSet[u] = true;
+//
+//        for (unsigned v = 0; v < size; v++) {
+//            if (adjMatrix[u][v] && mstSet[v] == false && adjMatrix[u][v] < key[v]) {
+//                parent[v] = u, key[v] = crispAdjMatrix[u][v];
+//            }
+//        }
+//    }
+//
+//    fuzzy::Triangle costFN = nullTriangle;
+//
+//    for (unsigned v = 1; v < size; v++) {
+//        costFN += adjMatrix[parent[v]][v];
+//    }
+//    std::cout << "Final cost = " << fuzzy::GradedMeanIntegration::defuzzify(&costFN);
+//    return parent;
+//}

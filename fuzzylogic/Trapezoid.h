@@ -47,6 +47,8 @@ namespace fuzzy {
 		}
 
 		double getMembership(double t) const;
+		bool operator==(const Trapezoid& op) const;
+		bool operator!=(const Trapezoid& op) const;
 		Trapezoid operator+(const Trapezoid&) const;
 		Trapezoid& operator+=(const Trapezoid&);
 

@@ -20,7 +20,8 @@ public:
         return "Prim";
     }
 
-    static std::vector<unsigned> getMstCrisp(std::vector<std::vector<fuzzy::Triangle>>&);
+    // static std::vector<unsigned> getMst(std::vector<std::vector<fuzzy::Triangle>>&);
+    static std::vector<unsigned> getMstScalar(std::vector<std::vector<fuzzy::Triangle>>&);
     static std::vector<unsigned> getMstFuzzy(std::vector<std::vector<fuzzy::Triangle>>&);
     static std::vector<unsigned> getMst(std::vector<std::vector<double>>&);
     static std::vector<unsigned> getMst(std::vector<std::vector<int>>&);

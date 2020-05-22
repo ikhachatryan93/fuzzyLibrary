@@ -41,9 +41,11 @@ namespace fuzzy {
 		}
 
 		double getMembership(double t) const;
-		void add(const Triangle&);
 		Triangle operator+(const Triangle&) const;
 		Triangle& operator+=(const Triangle&);
+		bool operator==(const Triangle&) const ;
+		bool operator!=(const Triangle& op) const;
+
 	};
 }
 

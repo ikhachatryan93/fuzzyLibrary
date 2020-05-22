@@ -55,7 +55,7 @@ public:
 	}
 	
 	void PrintMst() {
-		std::cout << "MST\n---------------------------------\n";
+		std::cout << "\nMST\n---------------------------------\n";
 		for (unsigned i = 1; i < adjMatrix.size(); i++) {
 			std::cout << mst[i] << " - " << i << " \t" << adjMatrix[i][mst[i]] << " \n";
 		}
