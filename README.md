@@ -1,2 +1,2 @@
 # fuzzyLibrary
-Specialized library based on fuzz logic
+Specialized library for fuzzy logic
